@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Asset Marketing Studio Documentation
+    url: https://github.com/asset-io/asset-marketing-studio/tree/main/docs
+    about: Check our documentation for guides and API references
+  - name: GitHub Discussions
+    url: https://github.com/asset-io/asset-marketing-studio/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: Asset.io Support
+    url: https://asset.io/contact
+    about: Get in touch with our support team for commercial assistance

@@ -1,0 +1,97 @@
+# Dependabot configuration file
+# See https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    # Look for package.json and package-lock.json in the root directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
+      # Check on Mondays at 9:00 AM UTC
+      day: "monday"
+      time: "09:00"
+    # Limit the number of pull requests opened by Dependabot
+    open-pull-requests-limit: 5
+    # Group updates for minor and patch versions
+    groups:
+      minor-and-patch-dependencies:
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      dev-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+    # Add reviewers to pull requests
+    reviewers:
+      - "drewp"
+    # Add assignees to pull requests
+    assignees:
+      - "drewp"
+    # Commit message format
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # Look for GitHub Actions in the .github directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
+      # Check on Mondays at 9:00 AM UTC
+      day: "monday"
+      time: "09:00"
+    # Limit the number of pull requests opened by Dependabot
+    open-pull-requests-limit: 3
+    # Add reviewers to pull requests
+    reviewers:
+      - "drewp"
+    # Add assignees to pull requests
+    assignees:
+      - "drewp"
+    # Commit message format
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+
+  # Enable version updates for npm in the asset-marketing-studio directory
+  - package-ecosystem: "npm"
+    # Look for package.json and package-lock.json in the asset-marketing-studio directory
+    directory: "/asset-marketing-studio"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
+      # Check on Mondays at 9:00 AM UTC
+      day: "monday"
+      time: "09:00"
+    # Limit the number of pull requests opened by Dependabot
+    open-pull-requests-limit: 5
+    # Group updates for minor and patch versions
+    groups:
+      minor-and-patch-dependencies:
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      dev-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+    # Add reviewers to pull requests
+    reviewers:
+      - "drewp"
+    # Add assignees to pull requests
+    assignees:
+      - "drewp"
+    # Commit message format
+    commit-message:
+      prefix: "deps"
+      include: "scope"
