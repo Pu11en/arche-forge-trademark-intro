@@ -86,7 +86,8 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# dist - Commented out for Vercel deployment
+# dist
 
 # Gatsby files
 .cache/
