@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./NightRaidIntro.css";
 
 const LINES = [
 "Bye-Bye Bitches™",
@@ -135,22 +136,29 @@ export default function NightRaidIntro() {
 }}
   style={{
     backgroundImage: "url('/bull2.png')",
-backgroundSize: "cover",
-backgroundPosition: "center",
-backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
     color: "white",
     height: "100vh",
     width: "100vw",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: "4rem",
+    fontSize: "clamp(2rem, 5vw, 4rem)",
     fontWeight: "bold",
     cursor: "pointer",
     textAlign: "center",
+    margin: 0,
+    padding: 0,
+    boxSizing: "border-box",
+    overflow: "hidden",
   }}
 >
- FORGE
+ <div>
+   <div className="forge-text">FORGE</div>
+ </div>
 </div>
     );
   }
@@ -160,19 +168,23 @@ backgroundRepeat: "no-repeat",
     <div
   style={{
   backgroundImage: "url('/bull2.png')",
-backgroundSize: "cover",
-backgroundPosition: "center",
-backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundAttachment: "fixed",
     color: "white",
     height: "100vh",
     width: "100vw",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: "4rem",
+    fontSize: "clamp(1.5rem, 4vw, 3rem)",
     fontWeight: "bold",
     textAlign: "center",
-    padding: "0 2rem",
+    padding: "0 clamp(1rem, 4vw, 2rem)",
+    margin: 0,
+    boxSizing: "border-box",
+    overflow: "hidden",
   }}
 >
       {LINES[index]}
